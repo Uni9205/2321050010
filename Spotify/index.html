@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cham">
+            <p>...</p>
+            <p style="margin-left: 10px;"> < > </p>
+        </div>
+        <div class="thanhtimkiem">
+            <img src="../pic/home.png" alt="">
+            <i class="search" ></i>
+            <input type="text" placeholder="Bạn muốn phát nội dung gì?" id="tk">
+            <i class="trash" id="clear"></i>
+            <script>
+                const input = document.getElementById("tk");
+                const clear = document.getElementById("clear");
+
+                clear.addEventListener("click", () => {
+                input.value = "";
+                input.focus();
+                });
+            </script>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

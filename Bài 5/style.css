@@ -4,7 +4,7 @@ body {
 
 nav {
     background-color: #0c4ca3;
-    padding: 10px; /* khoảng cách giữa các từ */
+    /* padding: 10px;  khoảng cách giữa các từ */
 }
 
 ul {
@@ -27,7 +27,7 @@ li {
     font-family: Roboto, Arial, Tahoma;
 }
 
-.benner {
+.benner-qc {
     display: flex;
     justify-content: center;
     margin: 10px 0px;
@@ -36,6 +36,10 @@ li {
 .qc {
     display: flex;
     justify-content: space-between;
+    img {
+        width: 100%; /* Ảnh sẽ chiếm 100% chiều rộng của .container */
+        height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+    }
 }
 
 header {
@@ -44,4 +48,76 @@ header {
 
 main {
     font-family: Roboto, Arial, Tahoma;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: normal;
+}
+
+.tintuc {
+    display: flex; /* Biến phần tử cha thành flex container */
+    justify-content: space-between; /* Tạo khoảng trống đều giữa các cột */
+    flex-wrap: wrap; /* Cho phép các cột tự động xuống dòng trên màn hình nhỏ */
+}
+
+.tt {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.tt img {
+    width: 100%; /* Hình ảnh vừa với chiều rộng của cột */
+    height: auto; /* Giữ tỷ lệ */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.tt h3 {
+    font-weight: normal; /* Bỏ in đậm */
+    font-size: 16px; /* Giảm kích thước chữ */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tt .noidung ul {
+    list-style-type: none; /* Ẩn gạch đầu dòng mặc định */
+    padding: 0;
+    margin: 0;
+}
+
+.tt .noidung li {
+    position: relative;
+    padding-left: 20px; /* Tạo khoảng trống cho gạch đầu dòng tùy chỉnh */
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.tt .noidung li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    color: #007bff; /* Màu xanh của hình vuông */
+}
+

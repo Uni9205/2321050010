@@ -1,0 +1,365 @@
+body {
+    margin: 0px;
+}
+
+nav {
+    background-color: #0c4ca3;
+    /* padding: 10px;  khoảng cách giữa các từ */
+}
+
+ul {
+    display: flex;              /* Sắp xếp các phần tử theo hàng ngang */
+    justify-content: center;    /* xóa dấu chấm đầu dòng */
+    list-style: none;           /* căn giữa các phần tử con */
+}
+
+li {
+    padding: 15px;      /* khoảng trống bên trong phần tử */
+}
+
+.border {
+    border-right: 1px solid grey; 
+}
+
+.danhmuc-lienket {
+    color: white;
+    text-decoration: none;
+    font-family: Roboto, Arial, Tahoma, Veranda;
+}
+
+.benner-qc {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.qc {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    border-bottom: 10px solid #f1f1f2;
+}
+
+main {
+    font-family: Roboto, Arial, Tahoma, Veranda;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;              /* căn giữa nội dung cột theo chiều dọc */
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #e0e0e0;
+    width: 73%;
+    margin: 0 auto;
+}
+
+.tieude{
+    padding-bottom:10px;
+    border-bottom: 3px #0c4ca3 solid ;
+    display:inline-block;
+}
+
+.header h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color:#024da1;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: grey;
+    font-weight: normal;
+}
+
+/* TIN TỨC */
+.tintuc {
+    width: 75%;
+    display: flex;              /* Biến phần tử cha thành flex container */
+    justify-content: center;    /* Tạo khoảng trống đều giữa các cột */
+    margin: 0 auto;
+    gap: 15px;  
+}
+.tt {
+    flex: 1;                 /* Mỗi cột chiếm diện tích bằng nhau */
+    padding: 20px;           /* Khoảng trống bên trong khối */
+    background-color: white;
+    margin-bottom: 20px;
+}
+.tt img {
+    width: 100%;    /* Hình ảnh vừa với chiều rộng của cột */
+    height: 30%;   /* Giữ tỷ lệ */
+}
+.tt h3 {
+    font-weight: normal;    /* Bỏ in đậm */
+    font-size: 18px;        /* Giảm kích thước chữ */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.tt ul {
+    padding: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+}
+.tt li {
+    list-style-type: square;    /* sửa dấu mặc định thành hình vuông */
+    padding-left: 3px;          /* Tạo khoảng trống cho gạch đầu dòng tùy chỉnh */
+}
+.tt li::marker{              /* chỉnh sửa dấu gạch đầu dòng */
+    color:#298ade;
+    font-size: 25px;
+}
+.qc-humg {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.qc-humg img {
+    width: 240px;
+    height: 80px;
+    margin: 0 auto;
+}
+.lienket {
+    width: 185px;
+    height: 55px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.table {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* THÔNG BÁO */
+.Thongbao {
+    background-color: #f0f0f4;
+}
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #e0e0e0;
+    width: 73%;
+    margin: 0 auto;
+}
+.header2 h1 {
+    font-size: 30px;
+    color:#024da1;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.tb {
+    width: 73%;
+    display: flex;                  /* Biến phần tử cha thành flex container */
+    justify-content: space-between; /* Tạo khoảng trống đều giữa các cột */
+    margin: 0 auto;
+    gap: 20px;  
+    padding: 20px;                  /* Khoảng trống bên trong khối */
+    margin-bottom: 20px;
+}
+.xemthem{
+    display:flex;
+    justify-content: end;
+}
+.tb .anhtb {
+    flex: 1;                 /* Mỗi cột chiếm diện tích bằng nhau */
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.tb img {
+    width: 450px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.tb ul {
+    flex-direction: column; /* xếp dọc */
+}
+.tb li {
+    list-style-type: square;  /* sửa dấu mặc định thành hình vuông */
+    padding-left: 5px;
+}
+.tb li::marker{         /* chỉnh sửa dấu gạch đầu dòng */
+    color:#298ade;
+    font-size: 25px;
+}
+.anhtb h3{
+    font-weight: normal; 
+    font-size: 22px;
+    margin-bottom: 0px;
+    color: #024da1;
+}
+.anhtb a {
+    text-decoration: none;
+    color: grey;
+    text-align: right;
+}
+
+/* THÔNG TIN TUYỂN SINH */
+.tuyensinh {
+    display:flex;
+    margin: 0;
+}
+.header h2 {
+    font-size: 25px;
+    color:#024da1;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.ts {
+    display:flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: 0 auto;
+    gap: 25px;  
+}
+.ts .anhts {
+    flex: 1;     /* Mỗi cột chiếm diện tích bằng nhau */
+    font-size: 18px;
+}
+.ts img {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100%; /* Hình ảnh vừa với chiều rộng của cột */
+    height: auto;
+}
+
+/* HOẠT ĐỘNG SINH VIÊN */
+.hd {
+    display:flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: 0 auto;
+    gap: 25px;  
+}
+.hd .anhhd {
+    flex: 1;            /* Mỗi cột chiếm diện tích bằng nhau */
+    font-size: 18px;
+}
+.hd img {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100%;        /* Hình ảnh vừa với chiều rộng của cột */
+    height: auto;
+}
+.hd ul {
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+    font-size: 16px;
+}
+.hd li {
+    list-style-type: square;  /* sửa dấu mặc định thành hình vuông */
+    padding-left: 0px;  
+}
+.hd li::marker{      /* chỉnh sửa dấu gạch đầu dòng */
+    color:#298ade;
+    font-size: 25px;
+}
+
+/* ĐỐI TÁC */
+.dt {
+    display:flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: 0 auto; 
+}
+.anhdt {
+    flex: 1;      /* Mỗi cột chiếm diện tích bằng nhau */
+}
+.dt img {
+    margin-top: 15px;
+    width: 100%;   /* Hình ảnh vừa với chiều rộng của cột */
+}
+
+/* TRI ÂN */
+.bg {
+    background-color: #f0f0f4;
+}
+.Trian {
+    display:flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: 0 auto;
+    gap: 25px;  
+    background-color: black;
+    color: white;
+}
+.video {                    
+    padding: 10px;
+    border-right: 1px dotted #b4b5ba;
+}
+.Trian h3 {
+    font-weight: normal; 
+    font-size: 22px;
+    padding-left: 20px;
+    border-bottom: 1px dotted #b4b5ba;
+    padding-bottom: 10px;      /* cách chữ với đường kẻ */
+}
+.border2 {
+    width: 100%;
+    border-bottom: 1px dotted #b4b5ba;
+    border-right: none;
+}
+.media ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+    font-size: 22px;
+}
+.media li {
+    list-style: none;
+    padding: 20px 0;     
+}
+.media a {
+    text-decoration: none;
+    color: white;
+}
+
+/* BẢNG XANH */
+footer {
+    font-family: Roboto, Arial, Tahoma, Veranda;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    background-color: #024da1;
+}
+.Cuoi {
+    display:flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+.xanh {
+    color: white;
+}
+.xanh1 {
+    display:flex;
+    justify-content: space-between;
+    width: 110%;
+    border-bottom: 2px solid white;
+}
+.xanh2 {
+    line-height: 1px;
+}
+h2 {
+    font-weight: normal; 
+}

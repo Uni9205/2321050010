@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    display:flex;
+}
+.cham {
+    display:flex;
+}
+.thanhtimkiem {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222; /* màu nền ô */
+    border-radius: 25px;
+    padding: 8px 12px;
+    width: 400px;
+    color: #bbb;
+}
+
+.thanhtimkiem i {
+  font-size: 18px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.thanhtimkiem input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.thanhtimkiem input::placeholder {
+  color: #aaa;
+}
