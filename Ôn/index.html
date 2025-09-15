@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in for Facabook</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 30%;
+    }
+    .ten{
+        display: flex;
+        justify-content: center;
+    }
+    .gender {
+        display:flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        
+    }
+</style>
+<body>
+    <h1>Create a new account</h1>
+    <p>It's quick and easy.</p>
+    <div class="ten">
+        <input type="text" name="Điền tên" placeholder="First name">
+        <input type="text" name="Điền tên" placeholder="Surname">
+    </div>
+    <div>
+        <p>Date of birth</p>
+        <select name="ngay">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="15">15</option>
+        </select>
+        <select name="thang">
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+        </select>
+        <select name="nam">
+            <option value="2025">2005</option>
+            <option value="2025">2025</option>
+        </select>
+    </div>
+    <div>
+        <p>Gender</p>
+        <div class="gender">
+            <input type="radio" name="gioitinh" value="Female">Female
+            <input type="radio" name="gioitinh" value="Male">Male
+            <input type="radio" name="gioitinh" value="Custom">Custom
+        </div>
+    </div>
+    <div>
+        <input type="email" name="email" placeholder="Mobile number or email address">
+    </div>
+    <div>
+        <input type="password" name="matkhau" placeholder="New password">
+    </div>
+</body>
+</html>

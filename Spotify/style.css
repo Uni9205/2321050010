@@ -98,6 +98,7 @@ header {
 .menu {
   display:flex;                     
   margin-bottom: 10px;
+  gap: 10px;
 }
 .nd {
   display:flex;                     /* đặt thanh thành flexbox */
