@@ -8,36 +8,85 @@
 </head>
 <style>
     body {
+        background: #bbb;
         display:flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
-        gap: 50px
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        height: 95vh;
     }
-    img {
-        width: 30%;
+    form {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 300px;
+        background: white;
+        border-radius: 10px;
+        padding: 100px;
+    }
+    .anh img {
+        width: 70%;
         height: auto;
     }
-    main {
-        background: #bbb;
+    .thongtin {
+        display:flex;
+        gap: 10px;
+        border-bottom: 2px solid #bbb;
+        padding: 5px;
+        align-items: center;
+        margin-top: 20px;
+        width: 250px;
+    }
+    input[type="text"], input[type="password"] {
+    border: none;
+    outline: none;
+    }
+    .in {
+        display:flex;
+        background: #58a9ff;
+        color: white;
+        border-radius: 5px;
+        justify-content: center;
+        margin: 30px 0 50px 0;
+        width: 90px;
+    }
+    .logo {
+        display:flex;
+        align-items: center;
     }
 </style>
 <body>
-    <img src="../pic/cute.jpg" alt="">
     <form>
-        <div>
-            <h1>Log in</h1>
-            <div>
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" name="hovaten" placeholder="Your Name"><br>
-            </div>
-            <div>
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" name="matkhau" placeholder="Password">
-            </div>
+        <div class="anh">
+        <img src="../pic/cute.jpg" alt="">
+        <p style="margin: 20px 0 0 70px;"><u>Create an account</u></p>
         </div>
         <div>
-            <input type="checkbox" name="sothich" value="game"> Remember me
+            <div>
+                <h1>Log In</h1>
+                <div class="thongtin">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="hovaten" placeholder="Your Name"><br>
+                </div>
+                <div class="thongtin">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" name="matkhau" placeholder="Password">
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <input type="checkbox" name="sothich" value="game"> Remember me
+            </div>
+            <div class="in">
+                <p>Log in</p>
+            </div>
+            <div class="logo">
+                <p style="margin-right:10px">Or login with</p>
+                <img style="width: 30px; height: 30px; border-radius: 3px;" src="../Ôn/img/facebook.webp" alt="">
+                <img style="width: 50px; height: 30px;" src="../Ôn/img/Twitter.png" alt="">
+                <img style="width: 30px; height: 30px; border-radius: 3px" src="../Ôn/img/google.webp" alt="">
+            </div>
         </div>
     </form>
 </body>
