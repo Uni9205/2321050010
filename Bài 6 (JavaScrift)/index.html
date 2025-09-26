@@ -49,18 +49,25 @@
             gioiTinh: true,
             lop: "Hệ thống thông tin K68",
         }
-        thongTinSinhVien.diaChi = diaChiNha;
         let diaChiNha = {
             thanhPho: "Quảng Ninh",
             quanHuyen: "Cửa Ông",
             soNha: 60,
         }
+        thongTinSinhVien.diaChi = diaChiNha;
         let namNay = 2025;
-        document.writeln("Xin chào bạn " + thongTinSinhVien.hoTen + " lớp " + thongTinSinhVien.lop + " nhà ở tỉnh " + thongTinSinhVien.diaChi.thanhPho + " sinh năm " + (namNay - thongTinSinhVien.tuoi));
+        document.writeln("<br>" + "Xin chào bạn " + thongTinSinhVien.hoTen + 
+                         " lớp " + thongTinSinhVien.lop + 
+                         " nhà ở tỉnh " + thongTinSinhVien.diaChi.thanhPho + 
+                         " phường " + thongTinSinhVien.diaChi.quanHuyen +
+                         " số nhà " + thongTinSinhVien.diaChi.soNha +
+                         " sinh năm " + (namNay - thongTinSinhVien.tuoi) + 
+                         "<br>");
 
         let so5 = "10";
-        so5 = parseInt(so5);
+        so5 = parseInt(so5);    //ép kiểu từ chuỗi sang kiểu số
         document.writeln(typeof (so5));
+        // 1 chuỗi + 1 số thì tự động chuyển thành chuỗi
 
     </script>    
 </body>
