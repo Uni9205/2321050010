@@ -1,0 +1,295 @@
+body {
+  background-color: black;
+  color: white;
+  font-family:Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+  font-size: 12px;
+}
+
+header {
+  display:flex;                   /* xếp phần tử con theo hàng ngang */
+  justify-content: space-between;
+  gap: 10px;
+}
+.cham {
+  display:flex;
+}
+.topgiua {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.toptrai {
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.anhhome {
+  margin-top: 2px;
+  width: 40px;
+  height:35px;
+}
+.thanhtimkiem {
+  display:flex;                     /* đặt thanh thành flexbox */
+  align-items: center;              /* căn giữa theo chiều dọc */
+  background: #222;               /* màu nền ô */
+  border-radius: 25px;              /* bo tròn */
+  padding: 8px 12px;                /* khoảng cách trong */
+  width: 400px;                     /* chiều rộng */
+  height: 25px;                     /* chiều cao */
+  color: #bbb;                    /* màu mặc định cho icon */
+}
+.thanhtimkiem img {
+  width: 20px;
+  height: 20px;
+}
+.thanhtimkiem i {
+  font-size: 18px;
+  margin: 0 8px;                    /* khoảng cách trái/phải */
+}
+.thanhtimkiem input {
+  flex: 1;                          /* chiếm hết không gian còn lại */
+  background: transparent;          /* nền trong suốt */
+  border: none;                     /* bỏ viền */
+  outline: none;                    /* bỏ viền khi focus */
+  color: white;
+  font-size: 16px;
+}
+.thanhtimkiem input::placeholder {
+  color: #aaa;
+}
+
+/* BỐ CỤC TRANG */
+.bocuc {
+  display: flex;
+  gap: 5px;
+}
+.trai, .giua, .phai {
+  background-color: #181818;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+.trai {
+  flex: 1; 
+  overflow:scroll;                         /* cột trái */
+  height: 609px;
+  overflow-x: hidden;
+  white-space: normal;
+  background-position-y: #222;
+}
+.giua {
+  flex: 3;                          /* cột giữa */
+  overflow:scroll;
+  height: 609px;
+  overflow-x: hidden;
+  white-space: normal;
+}
+.phai {
+  flex: 1;                          /* cột phải */
+  overflow:scroll;
+  height: 609px;
+  overflow-x: hidden;
+  white-space: normal;
+}
+
+/* CHUNG */
+.menu {
+  display:flex;                     
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.nd {
+  display:flex;                     /* đặt thanh thành flexbox */
+  justify-content: space-between;
+  align-items: center;
+  background: #222;               /* màu nền ô */
+  border-radius: 25px;
+  padding: 8px 12px;
+  height: 15px;
+  color: white;
+  margin-right: 5px;
+}
+.chunho {
+  font-size: 10px;
+  color:#bbb;
+}
+
+/* NỘI DUNG CỘT TRÁI */
+.library {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-top: -15px;
+}
+.likesong {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 45px;
+}
+.likesong img {
+  width: 40px;
+  height:auto;
+  border-radius: 5px;
+  margin: 0 10px;               
+}
+.ndsong {
+  line-height: 1px;
+}
+
+/* NỘI DUNG CỘT GIỮA */
+.song {
+  display:flex;
+  gap: 10px;
+}
+.anh {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 45px;
+}
+.anh img {
+  width: 50px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  margin: 0 10px 0 0;         /* Trên Phải Dưới Trái */
+}
+.Kel {
+  display:flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.Made {
+  display:flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 15px; 
+  font-size: 10px;
+  color:#bbb;
+}
+.Made img {
+  width: 100%;
+  height: 70%;
+  border-radius: 5px 0 0 5px;
+}
+.DauJump {
+  display:flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.Jump {
+  display:flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 15px; 
+}
+.Jump img {
+  width: 100%;
+  height:auto;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* NỘI DUNG CỘT PHẢI */
+.ndphai {
+  margin: 0 10px;
+}
+.phai img {
+  width: 300px;
+  height: 200px;
+  border-radius: 0 0 5px 5px;
+}
+.listeners {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.follow {
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 5px 12px;
+  height: 15px;
+  color: white;
+  margin-right: 5px;
+}
+.Gym {
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: auto;
+}
+.artist {
+  width: 300px;
+  height: 170px;
+  background-image: url("../pic/Totoro.jpg"); /* lấy ảnh làm nền của khung */
+  background-size: cover;                     /* cho ảnh phủ hết khung */
+  position: relative;
+  border-radius: 5px 5px 0 0;
+}
+.chu {
+  position: absolute;
+  top: 5px;                                   /* cách mép trên 5px */
+  left: 10px;                                 /* cách mép trái 10px */
+  color: white;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  display:flex;
+  justify-content: space-between;
+}
+.footer-trai {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin: 9px 0;
+  width: 300px;
+  height: 40px;
+}
+.footer-trai img {
+  width: 40px;
+  height:auto;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.footer-giua {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.footer-giua img {
+  width: 200px;
+  height: auto;
+}
+.botgiua {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 60%;
+}
+.botgiua input[type="range"] {
+  flex: 1;
+}
+.footer-phai {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+.footer-phai input[type="range"] {
+  width: 80px;
+}

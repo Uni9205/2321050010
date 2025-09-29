@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in for Facabook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #e8e8e8;
+        width: 400px;
+        margin: 0 auto;
+        font-size: 13px;
+    }
+    form {
+        display: flex;
+        border-radius: 5px;
+        flex-direction: column;
+        background: white;
+        padding: 0 15px;
+    }
+    .top {
+        border-bottom: 1px solid #bbb;
+        margin-bottom: 20px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ten{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    input[type="text"], input[type="radio"], input[type="email"], input[type="password"], select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #949494;
+    }
+    select {
+        width: 123px;
+    }
+    .gender-chung {
+        display:flex;
+        gap:10px;
+    }
+    .gender {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 1px solid #949494;
+        width: 102px;
+        padding: 8px;
+        font-size: 13px;
+        margin: -5px 0 10px 0;
+    }
+    .ghichu {
+        font-size: 10px;
+        color: #949494;
+    }
+    .ghichu a {
+        color:#0f68c7;
+    }
+    .up {
+        display:flex;
+        justify-content: center;
+        background: #0cb333;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 8px;
+        width: 150px;
+        margin: 10px auto 5px auto;
+    }
+</style>
+<header>
+    <h1 style="color: #1a84f5; font-size: 50px;">facebook</h1>
+</header>
+<body>
+    <form>
+        <div class="top">
+            <h2>Create a new account</h2>
+            <p style="color: #878787; margin-top: -10px;">It's quick and easy.</p>
+        </div>
+        <div class="ten">
+            <input type="text" name="Điền tên" placeholder="First name">
+            <input type="text" name="Điền tên" placeholder="Surname">
+        </div>
+        <div>
+            <p>Date of birth <i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
+            <select name="ngay">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option> 
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+            <select name="thang">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+            </select>
+            <select name="nam">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+            </select>
+        </div>      
+        <p>Gender <i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
+        <div class="gender-chung">
+            <div class="gender">
+                Female<input type="radio" name="gioitinh" value="Female">
+            </div>
+            <div class="gender">
+                Male<input type="radio" name="gioitinh" value="Male">
+            </div>
+            <div class="gender">
+                Custom<input type="radio" name="gioitinh" value="Custom">
+            </div>
+        </div>
+        <input style="width: 357px; margin-bottom: 10px;" type="email" name="email" placeholder="Mobile number or email address">
+        <input style="width: 357px; margin-bottom: 10px" type="password" name="matkhau" placeholder="New password">
+        <div class="ghichu">
+            <p style="margin-bottom: -10px;">People who use our service may have uploaded your contact information to Facebook. <a>Learn more.</a></p><br>
+            <p>By clicking Sign Up, you agree to our <a>Terms, Privacy Policy </a>and <a>Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+        </div>
+        <div class="up">Sign Up</div>
+        <p style="margin: 15px auto 20px auto;font-size: 17px; color:#1a84f5">Already have an account?</p>
+    </form>
+</body>
+</html>

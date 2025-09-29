@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script>
+        //để viết chú thích js dùng kí tự //
+        document.writeln ("hello world <br>");
+
+        let hoTen = "Pham Huong Giang";
+        document.writeln (hoTen + "<br>");
+        //Dau + de noi chuoi 
+
+        //Hang
+        const pi = 3.14;
+
+        let soThuNhat = 10; let soThuHai = 5;
+        let ketQua = 0;
+        // + - * /
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua);
+        // % 
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua);
+        // ++, -- phai viet truoc khi in ra man hinh 
+        ketQua = soThuNhat - soThuHai;
+        ketQua++;       //Tang len 1 don vi
+        document.writeln (ketQua);
+        // so1 = so1 - so2
+        soThuNhat -= soThuHai;
+        document.writeln (ketQua);
+
+        //So sanh
+        let soThuBa = 10;
+        let soThuTu = "10";
+        document.writeln(soThuBa == soThuTu);    // 2 dau = thi khong quan tam kieu gia tri con 3 dau = thi quan tam den kieu gia tri
+        document.writeln(soThuBa != soThuTu);      // 1 dau = thi khac nhau ve gtri, 2 dau = thi phai khac nhau ca ve gtri va kieu dl
+        document.writeln(!(soThuBa !== soThuTu));   // them ! o truoc ca bieu thuc thi la phu dich cua ket qua
+        //  Khai bao biến không có giá trị ban đầu thì là underfined  
+
+        let thongTinSinhVien = {
+            hoTen: "Phạm Hương Giang",
+            tuoi: 20,
+            gioiTinh: true,
+            lop: "Hệ thống thông tin K68",
+        }
+        let diaChiNha = {
+            thanhPho: "Quảng Ninh",
+            quanHuyen: "Cửa Ông",
+            soNha: 60,
+        }
+        thongTinSinhVien.diaChi = diaChiNha;
+        let namNay = 2025;
+        document.writeln("<br>" + "Xin chào bạn " + thongTinSinhVien.hoTen + 
+                         " lớp " + thongTinSinhVien.lop + 
+                         " nhà ở tỉnh " + thongTinSinhVien.diaChi.thanhPho + 
+                         " phường " + thongTinSinhVien.diaChi.quanHuyen +
+                         " số nhà " + thongTinSinhVien.diaChi.soNha +
+                         " sinh năm " + (namNay - thongTinSinhVien.tuoi) + 
+                         "<br>");
+
+        let so5 = "10";
+        so5 = parseInt(so5);    //ép kiểu từ chuỗi sang kiểu số
+        document.writeln(typeof (so5));
+        // 1 chuỗi + 1 số thì tự động chuyển thành chuỗi
+
+    </script>    
+</body>
+
+</html>

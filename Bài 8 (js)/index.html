@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <script>
+        // MẢNG
+        let arr = [];
+        let ten = 'ten';
+        let thongTin = {
+            ten: ten
+        }
+        document.writeln(Array.isArray(arr) + '<br>');   // Kiểm tra cú pháp có phải mảng ko    
+
+        let mang = [1, 2, 3, 4, 'a', 'b', 'c', 2, 3];
+        document.writeln(mang.length);    // Đếm số phần tử xuất hiện trong mảng
+        document.writeln(mang[2]);    // Lấy ra phần tử trong mảng (bắt đầu từ 0)
+        document.writeln(mang.indexOf(3));    // Lấy ra vị trí xuất hiện đầu tiên của phần tử
+        document.writeln(mang.lastIndexOf(3));  // Lấy ra vị trí xuất hiện cuối cùng của phần tử
+        mang[3] = 6;  // Thay đổi giá trị trong mảng
+        document.writeln(mang + '<br>');
+
+        let a, b, c, d;
+        a = [1, 2, 3];
+        b = 'JavaScript';
+        c = [42, 'JS'];
+        d = a.concat(b, c); // Nối các mảng với nhau thành 1 mảng
+        // d = d.join('/'); // Biến mảng thành 1 chuỗi
+        d.pop();    // Xóa phần tử cuối cùng
+        d.push('Giang');    // Thêm phần tử vào cuối mảng
+        d.reverse();    // Đảo ngược mảng
+        d.shift();  // Xóa phần tử đầu tiên
+        d.unshift('Giang');    // Thêm phần tử vào đầu
+        document.writeln(d + '<br>');
+        // document.writeln(Array.isArray(arr) + '<br>');  
+
+        let so = '1000000000000002';
+        let soCuoi = parseInt(so[so.length -1]);
+        if (soCuoi % 2 == 0) {
+            document.writeln(so + ' là số chẵn' + '<br>')
+        }
+        else {
+            document.writeln(so + ' ko là số chẵn' + '<br>')
+        }
+
+        let now = new Date().getHours();
+        // 5->10: Chào buổi sáng
+        // 10->13: Chào buổi trưa
+        // 13->17: Chào buổi chiều
+        // 17->22: Chào buổi tối
+        // còn lại: Chào buổi đêm
+        if (now>=5 && now<10) {
+            document.writeln('Chào buổi sáng');
+        } else if (now>=10 && now<13) {
+            document.writeln('Chào buổi trưa');
+        } else if (now>=13 && now<17) {
+            document.writeln('Chào buổi chiều');
+        } else if (now>=17 && now<22) {
+            document.writeln('Chào buổi tối');
+        } else {
+            document.writeln('Chào buổi đêm');
+        }
+        
+        // a, b, c
+        tổng = a * 0.6 + b * 0.3 + c * 0.1
+        tổng nằm trong khoảng từ 
+    </script>
+</body>
+</html>
