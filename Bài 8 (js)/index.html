@@ -63,6 +63,7 @@
         } else {
             document.writeln('Chào buổi đêm');
         }
+        document.writeln('<br>');
         
         // a, b, c
         // tổng = a * 0.6 + b * 0.3 + c * 0.1
@@ -72,10 +73,31 @@
         // 4->5: D
         // <4 : F
         let tong;
-        a = 1;
-        b = 4;
-        c = 100;
-        tong = a*0.6+b*0.3+c*0.1;
+        a = 9;
+        b = 6;
+        c = 9;
+        tong = a*0.6+b*0.3+c*0.1;    
+        if(a<0 || a>10 || b<0 || b>10 || c<0 || c>10) {
+            document.writeln('Điểm không hợp lệ!!!')
+        }
+        else if(tong>8 && tong<=10) {
+            document.writeln('Điểm A')
+        }
+        else if(tong>7 && tong<=8) {
+            document.writeln('Điểm B')
+        }
+        else if(tong>5 && tong<=7) {
+            document.writeln('Điểm C')
+        }
+        else if(tong>4 && tong<=5) {
+            document.writeln('Điểm D')
+        }
+        else {
+            document.writeln('Điểm F')
+        }
+            
+        
+        
 
 
 
