@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let ten = promt('Họ và tên', 'Ví dụ: Abc');
+        // document.writeln(ten);
+        // function hamkots(){
+        //     document.writeln(ten)
+        // }
+        // hamkots();
+
+        // let so = parseInt(promt('Nhập số'));
+        // function hamcots(so){
+        //     if (!so){
+        //         document.writeln('Vui lòng nhập lại')
+        //     }
+        //     for(let i=0; i<10; i++){
+        //         document.writeln(i)
+        //     }
+        // }
+        // hamcots(so);
+    </script>
+    
+    <h1>Tính tổng</h1>
+    <div>
+        Nhập số thứ nhất:
+        <input  id='soThuNhat'>
+    </div>
+    <div>
+        Nhập số thứ Hai:
+        <input  id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <div>
+        Kết quả: <input type="number" id="ketQua" class="ket-qua">
+    </div>
+    <script>
+        function tinhTong() {
+            let soThuNhat = parseFloat(getElementById('soThuNhat').value);
+            let soThuHai = parseFloat(getElementById('soThuHai').value);
+            let canhBao = '';
+            if(!soThuNhat) {
+                canhBao += 'Vui lòng nhập số thứ 1';
+            }
+            if(!soThuHai) {
+                canhBao += 'Vui lòng nhập số thứ 2';
+            }
+            if(canhBao) {
+                alert(canhBao);
+            }
+            let tong = soThuNhat + soThuHai;
+            document.getElementById('ketQua').value = tong;
+        }        
+    </script>
+
+    <h1>Tính tổng điểm</h1>
+    <div>
+        Nhập điểm A:
+        <input  id='diemA'>
+    </div>
+    <div>
+        Nhập điểm B:
+        <input  id="diemB">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input  id="diemC">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng điểm</button>
+    </div>
+    <div>
+        Kết quả: <input id="ketQua" class="ket-qua">
+    </div>
+
+    <script>
+        function tinhTong() {
+            let diemA = parseFloat(document.getElementById("diemA").value);
+            let diemB = parseFloat(document.getElementById("diemB").value);
+            let diemC = parseFloat(document.getElementById("diemC").value);
+            let canhBao = "";
+            if(!diemA) {
+                canhBao += "Vui lòng nhập điểm A";
+            }
+            if(!diemB) {
+                canhBao += "Vui lòng nhập điểm B";
+            }
+            if(!diemC) {
+                canhBao += "Vui lòng nhập điểm C";
+            }
+            if(diemA<0 || diemA>10 || diemB<0 || diemB>10 || diemC<0 || diemC>10) {
+                canhBao += "Điểm không hợp lệ!!!";
+            }
+            if(canhBao) {
+                alert(canhBao);
+                return;
+            }
+            let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+            let diem = document.getElementById("ketQua");
+
+            if(tong>8 && tong<=10) {
+                diem.value = "A";
+            }
+            else if(tong>7 && tong<=8) {
+                diem.value = "B";
+            }
+            else if(tong>5 && tong<=7) {
+                diem.value = "C";
+            }
+            else if(tong>4 && tong<=5) {
+                diem.value = "D";
+            }
+            else {
+                diem.value = "F";
+            }
+        }        
+    </script>
+</body>
+</html>

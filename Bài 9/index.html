@@ -68,16 +68,17 @@
         document.writeln(result2);
         document.writeln('<br>');
 
+        // HÀM
         // function + tên hàm() {
         //     code logic...
         // }
         function sayHello() {
-            document.writeln('Xin chào');
+            document.writeln('Xin chào' + '<br>');
         }
         sayHello();
         let ten = prompt('Nhập họ và tên', 'Ví dụ: ABC');
-        let namSinh = prompt ('Nhập năm sinh', 'Ví dụ: 1997');
-        function sayHello2 (ten, namSinh) {
+        let namSinh = prompt('Nhập năm sinh', 'Ví dụ: 1997');
+        function sayHello2(ten, namSinh) {
             document.writeln ('Xin chào ' + ten + ' sinh năm ' + namSinh);
         }
         sayHello2(ten, namSinh);
