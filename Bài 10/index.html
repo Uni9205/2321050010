@@ -26,26 +26,29 @@
         // hamcots(so);
     </script>
     
-    <h1>Tính tổng</h1>
+    <h1>Tính</h1>
     <div>
         Nhập số thứ nhất:
-        <input  id='soThuNhat'>
+        <input type="number" id='soThuNhat'>
     </div>
     <div>
         Nhập số thứ Hai:
-        <input  id="soThuHai">
+        <input type="number" id="soThuHai">
     </div>
     <div>
-        <button onclick="tinhTong()">Tính tổng</button>
-    </div>
+        <button onclick="tinh('cong')">Tính tổng</button><br>
+        <button onclick="tinh('tru')">Tính hiệu</button><br>
+        <button onclick="tinh('nhan')">Tính tích</button><br>
+        <button onclick="tinh('chia')">Tính thương</button>
     <div>
         Kết quả: <input type="number" id="ketQua" class="ket-qua">
     </div>
     <script>
-        function tinhTong() {
-            let soThuNhat = parseFloat(getElementById('soThuNhat').value);
-            let soThuHai = parseFloat(getElementById('soThuHai').value);
+        function tinh(phepTinh) {
+            let soThuNhat = parseFloat(document.getElementById('soThuNhat').value);
+            let soThuHai = parseFloat(document.getElementById('soThuHai').value);
             let canhBao = '';
+            let ketQua = 0;
             if(!soThuNhat) {
                 canhBao += 'Vui lòng nhập số thứ 1';
             }
@@ -55,29 +58,40 @@
             if(canhBao) {
                 alert(canhBao);
             }
-            let tong = soThuNhat + soThuHai;
-            document.getElementById('ketQua').value = tong;
+            if(phepTinh == 'cong'){
+                ketQua = soThuNhat + soThuHai;
+            }
+            else if(phepTinh == 'tru'){
+                ketQua = soThuNhat - soThuHai;
+            }
+            else if(phepTinh == 'nhan'){
+                ketQua = soThuNhat * soThuHai;
+            }
+            else{
+                ketQua = soThuNhat / soThuHai;
+            }
+            document.getElementById('ketQua').value = ketQua;
         }        
     </script>
 
     <h1>Tính tổng điểm</h1>
     <div>
         Nhập điểm A:
-        <input  id='diemA'>
+        <input id="diemA">
     </div>
     <div>
         Nhập điểm B:
-        <input  id="diemB">
+        <input id="diemB">
     </div>
     <div>
         Nhập điểm C:
-        <input  id="diemC">
+        <input id="diemC">
     </div>
     <div>
         <button onclick="tinhTong()">Tính tổng điểm</button>
     </div>
     <div>
-        Kết quả: <input id="ketQua" class="ket-qua">
+        Kết quả: <input id="diemTB" class="ket-qua" type="text">
     </div>
 
     <script>
@@ -86,13 +100,13 @@
             let diemB = parseFloat(document.getElementById("diemB").value);
             let diemC = parseFloat(document.getElementById("diemC").value);
             let canhBao = "";
-            if(!diemA) {
+            if(isNaN(diemA)) {
                 canhBao += "Vui lòng nhập điểm A";
             }
-            if(!diemB) {
+            if(isNaN(diemB)) {
                 canhBao += "Vui lòng nhập điểm B";
             }
-            if(!diemC) {
+            if(isNaN(diemC)) {
                 canhBao += "Vui lòng nhập điểm C";
             }
             if(diemA<0 || diemA>10 || diemB<0 || diemB>10 || diemC<0 || diemC>10) {
@@ -103,7 +117,7 @@
                 return;
             }
             let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
-            let diem = document.getElementById("ketQua");
+            let diem = document.getElementById("diemTB");
 
             if(tong>8 && tong<=10) {
                 diem.value = "A";

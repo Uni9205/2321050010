@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bang{
+        display: flex;
+        background-color: bisque;
+        justify-items: center;
+        align-items: center;
+        
+    }
+</style>
+<body>
+    <h1>Tính chỉ số BMI</h1>
+    <div class="bang">
+        <div>
+            <div>
+                Cân nặng
+                <input type="number" id="canNang">
+            </div><br>
+            <div>
+                Chiều cao
+                <input type="number" id="chieuCao">
+            </div><br>
+            <div>
+                <button onclick="tinhChiSo()">Tính chỉ số</button>
+            </div><br>
+            <div>
+                Chỉ số BMI
+                <input type="number" id="chiSo" class="chi-so">
+            </div>
+        </div>
+        <img class="anh" width="70px" src="../Bài 11/ảnh/z7173870276393_8d9e4cda002d0ee4bbeda73ed2147a03.jpg">
+    </div>
+    <script>
+        function tinhChiSo(){
+            let canNang = parseFloat(document.getElementById('canNang').value);
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value);
+            let canhBao = '';
+            let chiSo = 0;
+            if(!canNang) {
+                canhBao += 'Vui lòng nhập cân nặng';
+            }
+            if(!chieuCao) {
+                canhBao += 'Vui lòng nhập chiều cao';
+            }
+            if(canNang<0 || chieuCao<0) {
+                canhBao += "Không hợp lệ!!!";
+            }
+            if(canhBao) {
+                alert(canhBao);
+            }
+            let congThuc = canNang / (chieuCao * chieuCao)
+            document.getElementById('ketQua').value = congThuc;
+        }
+    </script>
+</body>
+</html>
