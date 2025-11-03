@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .bang{
         display: flex;
-        background-color: bisque;
-        justify-items: center;
+        background: bisque;
         align-items: center;
-        
+        justify-content: center;
+        width: 35%;
+        height: 300px;
+        border-radius: 10px;
+        gap: 40px;
+        border: 1px solid black;
     }
 </style>
 <body>
@@ -19,43 +28,61 @@
     <div class="bang">
         <div>
             <div>
-                Cân nặng
-                <input type="number" id="canNang">
+                Cân nặng: <input type="number" id="canNang"> Kg
             </div><br>
             <div>
-                Chiều cao
-                <input type="number" id="chieuCao">
+                Chiều cao: <input type="number" id="chieuCao"> m
             </div><br>
             <div>
                 <button onclick="tinhChiSo()">Tính chỉ số</button>
             </div><br>
             <div>
-                Chỉ số BMI
-                <input type="number" id="chiSo" class="chi-so">
+                Chỉ số BMI: <input type="number" id="chiSo" class="chi-so">
             </div>
         </div>
-        <img class="anh" width="70px" src="../Bài 11/ảnh/z7173870276393_8d9e4cda002d0ee4bbeda73ed2147a03.jpg">
+        <img class="anh" width="70px" src="../Bài 11/ảnh/Binhthuong.jpg">
     </div>
     <script>
         function tinhChiSo(){
             let canNang = parseFloat(document.getElementById('canNang').value);
             let chieuCao = parseFloat(document.getElementById('chieuCao').value);
             let canhBao = '';
-            let chiSo = 0;
             if(!canNang) {
                 canhBao += 'Vui lòng nhập cân nặng';
             }
             if(!chieuCao) {
                 canhBao += 'Vui lòng nhập chiều cao';
             }
-            if(canNang<0 || chieuCao<0) {
+            if(canNang<=0 || chieuCao<=0) {
                 canhBao += "Không hợp lệ!!!";
             }
             if(canhBao) {
                 alert(canhBao);
             }
             let congThuc = canNang / (chieuCao * chieuCao)
-            document.getElementById('ketQua').value = congThuc;
+            document.getElementById('chiSo').value = congThuc;
+            BMI = congThuc;
+            doiCheDo();
+        }
+        
+        let BMI = 0;
+        let anh = document.getElementsByClassName('anh')[0]
+        function doiCheDo(){
+            if(BMI < 18.5){
+                anh.src='../Bài 11/ảnh/Thieucan.jpg';
+            }
+            else if(BMI >= 18.5 && BMI <= 24.9){
+                anh.src='../Bài 11/ảnh/Binhthuong.jpg';
+            }
+            else if(BMI >= 25 && BMI <= 29.9){
+                anh.src='../Bài 11/ảnh/Thuacan.jpg';
+            }
+            else if(BMI >=30 && BMI <= 39.9){
+                anh.src='../Bài 11/ảnh/Beophicapdo1-2.jpg';
+            }
+            else{
+                anh.src='../Bài 11/ảnh/Beophinang.jpg';
+            }
         }
     </script>
 </body>

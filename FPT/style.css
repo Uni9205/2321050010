@@ -116,14 +116,11 @@ main img {
 }
 .gioithieu {
     display:flex;
-    align-items: center;
-    gap: 5px;
+    gap: 5px;    
 }
-.gioithieu p {
-    bottom: 0;
-    top: 80%;
-    left: 20%;
-    right: 0;
+.gioithieu .li {
+    display: flex;
+    flex-direction: row;
 }
 .xemngay {
     display: flex;
