@@ -113,19 +113,34 @@ main img {
     background-size: cover;                                   /* cho ảnh phủ hết khung */
     position: relative;
     border-radius: 5px 5px 0 0;
+    background-position: center;
+    position: relative;
 }
-.gioithieu {
-    display:flex;
-    gap: 5px;    
-}
-.gioithieu .li {
+.dsgioithieu {
+    position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    bottom: 30px;
+    left: 15px
+}
+.gioithieu ul {
+    display: flex;
+    gap: 30px
 }
 .xemngay {
     display: flex;
     align-items: center;
-    gap: 10px;   /* khoảng cách giữa các nút */
+    gap: 20px;   /* khoảng cách giữa các nút */
+}
+.xemngay div i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #888;
+    background-color: #bbb (1, 1, 1, 1.5);
+    border-radius:15px;
+    width: 30px;
+    height: 30px;
 }
 .Xem {
     display:flex;                     /* đặt thanh thành flexbox */
@@ -133,11 +148,27 @@ main img {
     align-items: center;
     background: #EA4335;               /* màu nền ô */
     border-radius:10px;
-    padding: 10px 16px;
     color: white;
     gap: 8px;
     font-weight: bold;
-    margin-right: 5px;
+    border: none;
+    width: 150px;
+    height: 50px
+}
+.trailer {
+    display: none;
+    position: absolute;
+    inset: 0; /* = top:0; left:0; right:0; bottom:0 */
+    background-color: rgba(0, 0, 0, 0.9); /* lớp mờ nền */
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    z-index: 10; /* nằm trên banner */
+}
+.trailer iframe {
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
 }
 .chu {
     position: absolute;
